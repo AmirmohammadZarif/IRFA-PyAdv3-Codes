@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <title>لیست کارها</title>
+</html>
+
+<body>
+
+    <h1>
+        برنامه لیست کارها
+    </h1>
+
+    <form action="/add" method="post">
+        <input type="text" name="title">
+        <button type="submit">اضافه</button>
+    </form>
+
+    <h4>لیست</h4>
+    <ul>
+        {% for todo in todo_list %}
+        <li>
+            {{ todo.title }} - <a href="/update/{{ todo.id }}">اپدیت</a> - {{ todo.is_done }}
+        </li>
+        
+        {% endfor %}
+    </ul>
+
+</body>

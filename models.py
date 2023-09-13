@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
+from flask_sqlalchemy import SQLAlchemy
 
 Base = declarative_base()
 
